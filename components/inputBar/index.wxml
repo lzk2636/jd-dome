@@ -1,0 +1,10 @@
+<view class="searchBar">
+<view class="content">
+<input placeholder="输入你所需的内容" bindconfirm="confirm" data-input="value" value="{{value}}"></input>
+<van-icon name="chat" color="#fff" info="{{commentLength}}" />
+<van-icon name="like" color="{{is_collected===true? '#ff0':'#fff'}}" style="margin-left: 41rpx;" bindtap="collect" />
+<button  bindtap="shareNews" open-type="share" plain size="mini" style="border:none;padding-left:0rpx height:0"> 
+<van-icon name="share" color="#fff" style="margin: 0 auto;margin-top: 25rpx;"/>
+</button>
+</view>
+</view>

@@ -1,0 +1,32 @@
+<!--pages/study/index.wxml-->
+<van-cell-group>
+	<van-cell wx:for="{{searchResult}}" wx:key="*this" bindtap="toDetails" data-artId="{{item.art_id}}">
+		<view slot="title">
+			<view class="title">{{item.title}}</view>
+			<van-grid column-num="3" border="{{ false }}">
+      <block wx:if="{{item.cover.type!==0}}">
+      <van-grid-item use-slot wx:for="{{item.cover.images}}" >
+        
+					<image style="width: 100%; height: 90px;" src="{{item}}" />
+				</van-grid-item>
+      
+      </block>
+				
+			</van-grid>
+			<view class="messge">
+				<view class="message-item">
+					<van-icon name="comment-o" />
+					<text>评论({{item.comm_count}})</text>
+				</view>
+				<view class="message-item">
+					<van-icon name="good-job-o" />
+					<text>点赞({{item.like_count}})</text>
+				</view>
+        	<view class="message-item">
+				<van-icon name="shop-collect-o" />
+					<text>收藏({{item.collect_count}})</text>
+				</view>
+			</view>
+		</view>
+	</van-cell>
+</van-cell-group>

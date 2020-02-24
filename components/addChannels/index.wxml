@@ -1,0 +1,25 @@
+<van-popup show="{{ showChannel }}" position="left" custom-style="height: 100%;width:80%" bind:click-overlay="hiddenShow">
+	<view class="editChannel">
+		<text>
+        我的频道
+    </text>
+		<view>
+			<van-button plain round size="small" wx:if="{{!bIsEdit}}" bindtap="editContent">编辑</van-button>
+			<van-button plain round size="small"  wx:if="{{bIsEdit}}" bindtap="finish" >完成</van-button>
+		</view>
+	</view>
+  <van-grid>
+    <van-grid-item  class="clearBox" text="{{item.name}}" wx:for="{{channel}}" dot >
+    <view slot="icon" hidden="{{bIsHide}}">
+    <van-icon name="clear" class="clear" wx:if="{{item.id!==0}}" bindtap="clearMyChannel" data-id="{{item.id}}"/>
+    
+    </view>
+    </van-grid-item>
+</van-grid>
+<view class="editChannel">
+<text>频道</text>
+</view>
+<van-grid>
+ <van-grid-item  text="{{item.name}}" wx:for="{{aOtherChannels}}" bindtap="addMyChannel" data-item="{{item}}"/>
+</van-grid>
+</van-popup>

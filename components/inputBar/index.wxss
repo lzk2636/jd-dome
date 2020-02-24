@@ -1,0 +1,31 @@
+/* components/inputBar/index.wxss */
+.searchBar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #e31d1a;
+  /* height: 100rpx; */
+}
+.searchBar .content{
+  display: flex;
+  padding: 16rpx 0;
+ 
+  
+  justify-content: space-evenly; 
+}
+.searchBar .content input{
+  line-height: 100rpx;
+  height: 68rpx;
+  width: 400rpx;
+  border-radius:34rpx;
+  background: #fff;
+  padding-left: 2rem;
+  box-sizing: border-box;
+  /* text-indent: 2rem; */
+  margin-right: 30rpx;
+}
+button{
+  border:none;
+
+}

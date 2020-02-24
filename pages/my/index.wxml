@@ -1,0 +1,39 @@
+<view class="my-container">
+	<view class="bgmessage">
+		<view class="login" wx:if="userInfo">
+			<image src="{{userInfo.photo}}" bindtap="toEditUser"></image>
+			<text class="username">{{userInfo.name}}</text>
+		</view>
+		<view class="unlogin" wx:else>
+			<image src="https://img.yzcdn.cn/vant/logo.png"></image>
+		</view>
+		<view class="bg-bottom">
+			<view class="bg-item">
+				<text>{{userInfo.like_count}}</text>
+				<text>点赞</text>
+			</view>
+			<view class="bg-item">
+				<text>{{userInfo.follow_count}}</text>
+				<text>关注</text>
+			</view>
+			<view class="bg-item">
+				<text>{{userInfo.fans_count}}</text>
+				<text>粉丝</text>
+			</view>
+		</view>
+	</view>
+	<view class="state">
+		<van-grid>
+			<van-grid-item icon="like-o" text="收藏" />
+			<van-grid-item icon="clock-o" text="历史" />
+			<van-grid-item icon="records" text="作品" />
+
+		</van-grid>
+	</view>
+	<van-cell-group>
+		<van-cell title="消息通知" is-link  />
+		<van-cell title="用户反馈" is-link  />
+		<van-cell title="小智同学" is-link  />
+	</van-cell-group>
+
+</view>

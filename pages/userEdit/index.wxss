@@ -1,0 +1,11 @@
+/* pages/userEdit/index.wxss */
+page{
+  background-color: #f5f7f9;
+}
+image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.van-cell-group{
+  margin-bottom: 30rpx;
+}

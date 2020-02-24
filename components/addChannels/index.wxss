@@ -1,0 +1,27 @@
+/* components/addChannels/index.wxss */
+.editChannel{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.editChannel  .van-button{
+  margin-top: 10rpx;
+}
+ .van-grid-item__text{
+  height: 96rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.clearBox{
+  position: relative;
+}
+.clear{
+  color: #f00;
+  position: absolute;
+  font-size: 30rpx;
+  top: 0;
+  right: 0;
+}

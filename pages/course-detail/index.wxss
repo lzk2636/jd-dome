@@ -1,0 +1,69 @@
+/* pages/course-detail/index.wxss */
+page {
+  padding: 0 10rpx;
+}
+
+.title {
+  line-height: 100rpx;
+  font-size: 50rpx;
+  font-weight: 500;
+  width: 580rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.userMessage {
+  border: 1px solid #ccc;
+  margin: 20rpx 0;
+  display: flex;
+}
+
+.userMessage image {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  /* margin-right: 10rpx; */
+}
+
+.userMessage .message-info {
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.userMessage text {
+  display: block;
+  font-size: 24rpx;
+  line-height: 48rpx;
+}
+
+.userMessage van-button {
+  margin-right: 10rpx;
+  line-height: 88rpx;
+}
+
+
+
+.link {
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-evenly;
+  height: 74rpx;
+  line-height: 74rpx;
+
+
+}
+
+.active {
+  border: 1px solid #f00;
+  color: #f00;
+  padding: 0 20rpx;
+  border-radius: 37rpx;
+
+  /* border-radius: 23rpx; */
+}
+
+.comment-list {
+  margin-top: 50rpx;
+  margin-bottom: 100rpx;
+}

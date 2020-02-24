@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group", 
+    "van-popup": "@vant/weapp/popup",
+    "van-action-sheet": "@vant/weapp/action-sheet",
+    "van-field": "@vant/weapp/field",
+    "van-datetime-picker": "@vant/weapp/datetime-picker"
+  }
+}

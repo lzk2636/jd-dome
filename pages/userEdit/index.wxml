@@ -1,0 +1,30 @@
+<van-cell-group>
+	<van-cell title="头像" is-link>
+		<view solt="label">
+			<image src="{{userInfo.photo}}"></image>
+		</view>
+	</van-cell>
+	<van-cell title="呢称" is-link value="{{userInfo.name}}" bindtap="openShowPop" />
+	<van-cell title="介绍" is-link value="{{userInfo.intro}}" bindtap="openShowPop" />
+
+</van-cell-group>
+<van-cell-group>
+	<van-cell title="性别" is-link value="{{userInfo.gender==0?'男':'女'}}" bindtap="openAction" />
+	<van-cell title="生日" is-link value="{{userInfo.birthday}}" />
+</van-cell-group>
+
+<!-- 自定义图标 -->
+<van-popup show="{{ isEdit }}" bind:click-overlay="closePop" position="bottom" custom-style="height: 60%">
+	<van-cell-group>
+		<van-field value="{{ userInfo.name }}" data-name required clearable label="呢称" placeholder="请输入呢称" bind:change="onChange" />
+		<van-field value="{{ userInfo.intro}}" data-intro required clearable label="介绍" placeholder="请输入呢称" bind:change="onChange" />
+		<van-datetime-picker
+     type="date" 
+     value="{{ currentDate }}"
+      bind:input="onInput"
+       min-date="{{ minDate }}" 
+      />
+	</van-cell-group>
+</van-popup>
+<van-action-sheet show="{{ isShowAction }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
+<button>保存</button>

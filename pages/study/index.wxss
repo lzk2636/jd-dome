@@ -1,0 +1,25 @@
+/* pages/study/index.wxss */
+.title{
+  font-size: 40rpx;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 580rpx;
+  text-overflow: ellipsis;
+}
+.messge{
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-evenly;
+}
+.messge  .message-item{
+  flex: 1;
+  border: 1px solid #ccc;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.messge  .message-item text{
+  margin-left: 15rpx;
+}

@@ -1,0 +1,21 @@
+/* pages/course/index.wxss */
+page{
+  background-color: #fff;
+}
+.van-grid-item{
+  overflow: hidden;
+  border: 1px solid #e31d1a;
+  padding: 5rpx;
+  margin:5rpx 0;
+  /* width: 154rpx; */
+}
+.van-grid-item:nth-child(n2){
+  border-right: 0;
+}
+
+.van-grid-item__text{
+  overflow: hidden;
+  white-space :  nowrap;
+  text-overflow: ellipsis;
+  width: 154rpx;
+}

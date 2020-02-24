@@ -1,0 +1,34 @@
+<view class="title">
+	{{newDatails.title}}
+</view>
+<view class="userMessage">
+	<image src="{{newDatails.aut_photo}}"></image>
+	<view class="message-info">
+		<text>{{newDatails.aut_name}}</text>
+		<text>{{newDatails.pubdate}}</text>
+	</view>
+	<van-button type="danger" bindtap="follow">{{newDatails.is_followed==true? '已关注' : '关注'}}</van-button>
+</view>
+<rich-text nodes="{{newDatails.content}}" />
+<view class="link">
+	<view bindtap="unliking" class="{{newDatails.attitude==0?'active':''}}">
+		<van-icon name="like-o" />
+		<text>不喜欢</text>
+	</view>
+	<view bindtap="liking" class="{{newDatails.attitude==1?'active':''}}">
+		<van-icon name="good-job-o" />
+		<text>点赞</text>
+	</view>
+
+</view>
+<view class="comment-list">
+	<comment allComment="{{allComment}}" bind:Recomment="Recomment" isHideButton="{{true}}" />
+</view>
+<inputBar bind:share="share" bind:comment="comment" commentLength="{{total_count}}" artId="{{newDatails.art_id}}" bind:collect="isCollect" is_collected="{{newDatails.is_collected}}" />
+<!-- 评论的回复组件 -->
+<van-popup bind:click-overlay="hidenReCmment" show="{{ bIsRecomment }}" close-icon="close" position="bottom" custom-style="height: 70%" class="Recomment">
+	<comment allComment="{{RecommentList}}" isHideButton="{{false}}" />
+	<view>用户回复</view>
+	<inputBar bind:RecommentConfirm="RecommentConfirm" commentLength="{{aRecommentList.length}}" />
+	<comment allComment="{{aRecommentList}}" isHideButton="{{false}}" />
+</van-popup>

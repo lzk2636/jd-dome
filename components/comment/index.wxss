@@ -1,0 +1,43 @@
+/* components/comment.wxss */
+.comment{
+ width: 100%;
+ height: 184rpx;
+ display:  flex;
+ background: rgba(209, 207, 207, 0);
+ border: 1px solid #ccc;
+ margin: 20rpx 0;
+ border-right: 0;
+ border-left: 0;
+}
+.comment:last-child{
+  margin-bottom: 100rpx;
+}
+.comment image{
+  width: 80rpx;
+  height: 80rpx;
+  /* margin-top: -105rpx; */
+  border-radius: 50%;
+}
+.comment .uersInfo{
+  flex: 1;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+.comment .uersInfo text{
+  display: block;
+}
+.comment .uersInfo text:nth-child(2){
+ margin: 20rpx 0;
+ margin-top: 0;
+}
+.comment .uersInfo .time{
+  font-size: 24rpx;
+  color: #ccc;
+}
+van-icon{
+  margin-right: 50rpx;
+  color: #f00;
+}

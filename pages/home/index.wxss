@@ -1,0 +1,37 @@
+/* pages/home/index.wxss */
+.infoMessage{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+
+}
+.infoMessage .left text{
+
+  margin-right: 10rpx;
+}
+.title{
+  font-size: 36rpx;
+  font-weight: 500;
+}
+van-sticky{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.van-tabs__content{
+  position: absolute;
+  width: 100%;
+  z-index: -99;
+  left: 0;
+  top: 88rpx;
+}
+/* // 菜单 */
+.menus{
+ position: fixed;
+ right: 0;
+ top: 0px;
+ height:88rpx ;
+ font-size: 50rpx;
+}
+

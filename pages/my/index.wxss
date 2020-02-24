@@ -1,0 +1,65 @@
+/* pages/my/index.wxss */
+page{
+  background-color: #f5f7f9;
+}
+.my-container{
+  height: 100%;
+
+}
+.my-container .bgmessage{
+  background-color: #e31d1a;
+  height: 300rpx;
+
+}
+.my-container .bgmessage .login{
+  display: flex;
+  /* justify-content: space-evenly; */
+  padding-left: 80rpx;
+  padding-top: 30rpx;
+}
+.my-container .bgmessage .login image{
+  width: 122rpx;
+  height: 122rpx;
+  border-radius: 50%;
+}
+.my-container .bgmessage .login text{
+  margin-left: 20rpx;
+  margin-top: 5rpx;
+  color:#fff;
+}
+.my-container .bgmessage .unlogin{
+  /* margin: 0 auto; */
+  text-align: center;
+  display: none;
+} 
+.my-container .bgmessage .unlogin image{
+  width: 122rpx;
+  height: 122rpx;
+  /* text-align: center; */
+}
+.my-container .bgmessage .bg-bottom{
+  color: #fff;
+  font-weight: 800;
+  margin-top: 20rpx;
+  display:  flex;
+  justify-content: space-evenly;
+}
+.my-container .bgmessage .bg-bottom text{
+  text-align: center;
+  margin-bottom: 12rpx;
+  display: block;
+}
+.van-grid{
+  background-color: #fff;
+}
+.van-grid-item {
+
+ 
+ margin: 0 40rpx;
+}
+.van-grid-item:last-child{
+  margin-right: 0;
+}
+.van-cell-group{
+  margin-top: 20rpx;
+}

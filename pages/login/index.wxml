@@ -1,0 +1,27 @@
+<van-cell-group>
+ <van-field
+    value="{{ mobile }}"
+    required
+    clearable
+    label="用户名"
+    data-value="mobile"
+    icon="question-o"
+    placeholder="请输入手机号"
+    bind:click-icon="onClickIcon"
+     bind:change="onChange"
+  />
+
+  <van-field
+    value="{{ code }}"
+    data-value="code"
+    label="验证码"
+    placeholder="请输入验证码"
+    required
+    border="{{ false }}"
+     bind:change="onChange"
+  />
+</van-cell-group>
+<view class="button">
+<van-button type="primary" size="large" color="#e31d1a" round bindtap="login">登录</van-button>
+
+</view>

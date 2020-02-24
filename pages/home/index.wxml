@@ -1,0 +1,54 @@
+<!--pages/home/index.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange" swipeable>
+	<van-tab title="{{item.name}}" wx:for="{{channels}}" wx:key="*this">
+		<van-cell wx:for="{{item.list}}" wx:key="*this" bindtap="todetail" data-artId="{{item.art_id}}">
+			<view slot="title">
+				<view class="title">{{item.title}}</view>
+				<van-grid column-num="3" border="{{ false }}">
+					<block wx:if="item.cover.type!==0">
+						<van-grid-item use-slot wx:for="{{ item.cover.images}}" wx:key="*this">
+							<image style="width: 100%; height: 90px;" src="{{item}}" />
+						</van-grid-item>
+					</block>
+				</van-grid>
+				<view class="infoMessage">
+					<view class="left">
+						<text>{{item.aut_name}}</text>
+						<text>{{item.pubdate}}</text>
+					</view>
+					<van-icon name="cross" bindtap="feedback" data-artId="{{item.art_id}}" data-autId="{{item.aut_id}}" />
+				</view>
+			</view>
+		</van-cell>
+	</van-tab>
+</van-tabs>
+<!-- <van-cell title="展示弹出层" is-link bind:click="showPopup" /> -->
+<van-popup show="{{ show }}" bind:close="onClose" custom-style="width:340rpx">
+	<view wx:if="{{isFrist==1}}">
+		<van-cell title="不感兴趣" bindtap="dislike"></van-cell>
+		<van-cell is-link icon='clock-o' bindtap="reports">反馈垃圾内容</van-cell>
+		<van-cell title="拉黑作者" bindtap="blackUser"></van-cell>
+	</view>
+	<!-- </view> -->
+	<view wx:if="{{isFrist==2}}">
+		<!-- 0-其他问题，1-标题夸张，2-低俗色情，3-错别字多，4-旧闻重复，5-广告软文，6-内容不实，7-涉嫌违法犯罪，8-侵权'  -->
+		<van-cell bindtap="backTo">
+			<view slot="title">
+				<van-icon name="arrow-left" />
+			</view>
+		</van-cell>
+		<van-cell bindtap="reportsRequest" title="标题夸张" data-prosId="1"></van-cell>
+		<van-cell bindtap="reportsRequest" title="低俗色情" data-prosId="2"></van-cell>
+		<van-cell bindtap="reportsRequest" title="错别字多" data-prosId="3"></van-cell>
+		<van-cell bindtap="reportsRequest" title="旧闻重复" data-prosId="4"></van-cell>
+		<van-cell bindtap="reportsRequest" title="广告软文" data-prosId="5"></van-cell>
+		<van-cell bindtap="reportsRequest" title="内容不实" data-prosId="6"></van-cell>
+		<van-cell bindtap="reportsRequest" title="涉嫌违法犯罪" data-prosId="7"></van-cell>
+		<van-cell bindtap="reportsRequest" title="侵权" data-prosId="8"></van-cell>
+		<van-cell bindtap="reportsRequest" title="其他问题" data-prosId="0"></van-cell>
+	</view>
+
+
+</van-popup>
+<van-icon name="wap-nav" class="menus" bindtap="channelShow" />
+<addchannel channel="{{channels}}" showChannel="{{bIsShow}}" bind:super="super"/>

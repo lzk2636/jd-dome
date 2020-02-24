@@ -1,0 +1,12 @@
+<view class="comment" wx:for="{{allComment}}">
+	<image src="{{item.aut_photo}}"></image>
+	<view class="uersInfo">
+		<text class="username">{{item.aut_name}}</text>
+		<text class="content">{{item.content}}</text>
+		<view class="time">
+	 {{item.pubdate}}
+	<van-button round size="mini" bindtap="Recomment" data-item="{{item}}" wx:if="{{isHideButton}}" >回复 ({{item.reply_count}})</van-button>
+		</view>
+	</view>
+	<van-icon name="star" />
+</view>
